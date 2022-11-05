@@ -37,21 +37,21 @@ func launchGame() {
         } else if launchBot > launchPlayer {
             if bot1.health > 0 {
                 print("\(bot1.nickname) commence")
-                attack(from: Bot(), to: Player())
-                display(player: Player())
+                attack(from: bot1, to: player1)
+                display(player: player1)
                 print()
-                attack(from: Player(), to: Bot())
-                display(bot: Bot())
+                attack(from: player1, to: bot1)
+                display(bot: bot1)
             }
            
         } else if launchPlayer > launchBot {
             if player1.health > 0 {
                 print("\(player1.nickname) commence")
-                attack(from: Player(), to: Bot())
-                display(bot: Bot())
+                attack(from: player1, to: bot1)
+                display(bot: bot1)
                 print()
-                attack(from: Bot(), to: Player())
-                display(player: Player())
+                attack(from: bot1, to: player1)
+                display(player: player1)
             }
         }
         
