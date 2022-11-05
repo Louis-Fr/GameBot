@@ -16,7 +16,7 @@ func launchGame() {
     let nameUser = Utilisateur.saisirTexte()
     player1.nickname = nameUser
     
-
+    var count = 0
     while bot1.health > 0 && player1.health > 0 {
         
         print("\(nameUser) appuyez sur Entrée pour tirer au sort le joueur qui débutera")
@@ -25,38 +25,38 @@ func launchGame() {
         print("\(player1.nickname) lance le dè")
         let launchPlayer = startGamePlayer()
         print("\(bot1.nickname) lance le dè")
-        let botPlayer = startGameBot()
+        let launchBot = startGameBot()
         
         print()
         
-        if launchPlayer == botPlayer {
+        if launchPlayer == launchBot {
             
             print("Egalité relancer le dès")
-            /*print("\(nameUser) appuyez sur Entrée pour tirer au sort le joueur qui débutera")
-            _ = Utilisateur.saisirTexte()*/
             
             
-        } else if botPlayer > launchPlayer {
-            
-            print("\(bot1.nickname) commence")
-            attackBotPlayer(player: Player(), bot: Bot())
-            playerInfo(player: Player())
-            print()
-            attackPlayerBot(player: Player(), bot: Bot())
-            botInfo(bot: Bot())
-
+        } else if launchBot > launchPlayer {
+            if bot1.health > 0 {
+                print("\(bot1.nickname) commence")
+                attack(from: Bot(), to: Player())
+                display(player: Player())
+                print()
+                attack(from: Player(), to: Bot())
+                display(bot: Bot())
+            }
            
-        } else if launchPlayer > botPlayer {
-            
-            print("\(player1.nickname) commence")
-            attackPlayerBot(player: Player(), bot: Bot())
-            botInfo(bot: Bot())
-            print()
-            attackBotPlayer(player: Player(), bot: Bot())
-            playerInfo(player: Player())
-        
+        } else if launchPlayer > launchBot {
+            if player1.health > 0 {
+                print("\(player1.nickname) commence")
+                attack(from: Player(), to: Bot())
+                display(bot: Bot())
+                print()
+                attack(from: Bot(), to: Player())
+                display(player: Player())
+            }
         }
         
+        count += 1
+        print("Fin du tour \(count)")
         print()
         
     }
@@ -64,29 +64,27 @@ func launchGame() {
     if player1.health > bot1.health {
         print("\(player1.nickname) à Gagné")
     } else if bot1.health > player1.health {
-        print("bot1.nickname à Gagné")
+        print("\(bot1.nickname) à Gagné")
     }
  
  
-    func attackPlayerBot(player: Player, bot: Bot) -> Int {
+    func attack(from player: Player, to bot: Bot) {
         let attackPlayer = rollDices(name: player1.nickname)
         bot1.health = bot1.health - attackPlayer
         print("\(player1.nickname) a attaqué \(bot1.nickname) de \(attackPlayer)")
-        return attackPlayer
     }
     
-    func attackBotPlayer(player: Player, bot: Bot) -> Int {
+    func attack(from bot: Bot, to player: Player) {
         let attackBot = rollDices(name: "\(bot1.nickname)")
         player1.health = player1.health - attackBot
         print("\(bot1.nickname) a attaqué \(player1.nickname) de \(attackBot)")
-        return attackBot
     }
     
-    func botInfo(bot: Bot){
+    func display(bot: Bot){
         print("\(bot1.nickname) a \(bot1.health) point de vie et une force de \(bot1.strength)")
     }
     
-    func playerInfo(player: Player) {
+    func display(player: Player) {
         print("\(player1.nickname) a \(player1.health) point de vie et une force de \(player1.strenght)")
         
     }
