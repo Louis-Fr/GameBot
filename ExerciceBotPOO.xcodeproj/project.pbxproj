@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		F860308B1EB8C99F002BD3BF /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
-		F8A5D2571EB8B64000A56D56 /* ExerciceBot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExerciceBot; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A5D2571EB8B64000A56D56 /* ExerciceBotPOO */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ExerciceBotPOO; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A5D25A1EB8B64000A56D56 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F8A5D2611EB8B6C600A56D56 /* Utilisateur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
 		F8E22A7424C09D0D009CFF63 /* Bot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		F8A5D2581EB8B64000A56D56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8A5D2571EB8B64000A56D56 /* ExerciceBot */,
+				F8A5D2571EB8B64000A56D56 /* ExerciceBotPOO */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8A5D2561EB8B64000A56D56 /* ExerciceBot */ = {
+		F8A5D2561EB8B64000A56D56 /* ExerciceBotPOO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8A5D25E1EB8B64000A56D56 /* Build configuration list for PBXNativeTarget "ExerciceBot" */;
+			buildConfigurationList = F8A5D25E1EB8B64000A56D56 /* Build configuration list for PBXNativeTarget "ExerciceBotPOO" */;
 			buildPhases = (
 				F8A5D2531EB8B64000A56D56 /* Sources */,
 				F8A5D2541EB8B64000A56D56 /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = ExerciceBot;
+			name = ExerciceBotPOO;
 			productName = App_Console;
-			productReference = F8A5D2571EB8B64000A56D56 /* ExerciceBot */;
+			productReference = F8A5D2571EB8B64000A56D56 /* ExerciceBotPOO */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8A5D2521EB8B64000A56D56 /* Build configuration list for PBXProject "ExerciceBot" */;
+			buildConfigurationList = F8A5D2521EB8B64000A56D56 /* Build configuration list for PBXProject "ExerciceBotPOO" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8A5D2561EB8B64000A56D56 /* ExerciceBot */,
+				F8A5D2561EB8B64000A56D56 /* ExerciceBotPOO */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +290,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8A5D2521EB8B64000A56D56 /* Build configuration list for PBXProject "ExerciceBot" */ = {
+		F8A5D2521EB8B64000A56D56 /* Build configuration list for PBXProject "ExerciceBotPOO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A5D25C1EB8B64000A56D56 /* Debug */,
@@ -299,7 +299,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A5D25E1EB8B64000A56D56 /* Build configuration list for PBXNativeTarget "ExerciceBot" */ = {
+		F8A5D25E1EB8B64000A56D56 /* Build configuration list for PBXNativeTarget "ExerciceBotPOO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A5D25F1EB8B64000A56D56 /* Debug */,
